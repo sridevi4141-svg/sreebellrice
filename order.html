@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order</title>
+
+  <style>
+    body {
+      margin: 10;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .bill-box {
+      background: #fff;
+      width: 100%;
+      min-height: 100vh;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    #orderDetails {
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    .order-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .order-item strong {
+      font-size: 20px;
+    }
+
+    #totalAmount {
+      font-size: 25px;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      margin-top: 10px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkgreen;
+    }
+
+    #msg {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div class="bill-box">
+
+  <h2>SREE BELL RICE</h2>
+
+  <div id="orderDetails"></div>
+
+  
+
+  <input type="text" id="phone" placeholder="Enter Mobile Number">
+
+  <button onclick="submitOrder()">Submit Order</button>
+
+  <div id="msg"></div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
