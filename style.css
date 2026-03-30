@@ -128,7 +128,8 @@ details h3 {
 }
 
 .inputs input {
-  width: 140px;     /* 🔥 bigger boxes */
+  width: 120px;
+  height: 50px;     /* 🔥 bigger boxes */
   padding: 18px;
   font-size: 20px;
   text-align: center;
