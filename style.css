@@ -128,8 +128,8 @@ details h3 {
 }
 
 .inputs input {
-  width: 100px;     /* 🔥 bigger boxes */
-  padding: 12px;
+  width: 140px;     /* 🔥 bigger boxes */
+  padding: 18px;
   font-size: 20px;
   text-align: center;
   border-radius: 8px;
@@ -238,6 +238,9 @@ button {
 body {
   font-family: Arial;
   background: #f5f5f5;
+  body {
+  transform: none !important;
+}
 }
 
 .header {
