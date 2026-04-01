@@ -316,44 +316,15 @@ window.toggleCart = function () {
   }
 };
 
-function loadCart() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || {};
-  let total = 0;
 
-  let div = document.getElementById("cartItems");
-  if (!div) return;
 
-  div.innerHTML = "";
-
-  for (let key in cart) {
-    let item = cart[key];
-    let itemTotal = item.bags * item.price;
-    total += itemTotal;
-
-    div.innerHTML += `
-      <div class="cart-item">
-        <img src="images/${item.image}">
-        
-        <div class="cart-details">
-          <h3>${item.name}</h3>
-          <p>Qty: ${item.bags} × ₹${item.price}</p>
-          <p class="item-total">₹${itemTotal}</p>
-        </div>
-      </div>
-    `;
-  }
-
-  document.getElementById("finalTotal").innerText = total;
-}
-
-window.onload = loadCart;
 function showMessage(text) {
   let msg = document.createElement("div");
 
   msg.innerText = text;
 
   msg.style.position = "fixed";
-  msg.style.top = "50px"; 
+  msg.style.top = "100px"; 
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
   msg.style.background = "green";
