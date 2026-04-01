@@ -130,10 +130,11 @@ details h3 {
 .inputs input {
   width: 100px;     /* 🔥 bigger boxes */
   padding: 12px;
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 4px solid #0c0b0b;
+  height:50px;
 }/* Order */
 .order-box {
   margin-top: 50px;
@@ -316,7 +317,7 @@ h3 {
     font-size: 20px;
   }
 .category-btn {
-    font-size: 26px;
+    font-size: 20px;
     width: 100%;
   }
   .order-btn {
@@ -327,8 +328,8 @@ h3 {
 
 
 .category-btn {
-  font-size: 30px;
-  padding: 15px 25px;
+  font-size: 25px;
+  padding: 8px 15px;
   margin: 8px;
   background-color: #0a0a0a;
   color: white;
