@@ -50,7 +50,7 @@ body {
 }
 
 .tabs button {
-  font-size: 30px;
+  font-size: 40px;
   padding: 12px 1px;
   border-radius: 50px;
   background-color: black;
@@ -101,7 +101,7 @@ body {
 }
 
 .details h3 {
-  font-size: 40px;   /* 🔥 bigger text */
+  font-size: 35px;   /* 🔥 bigger text */
   margin: 0;
   text-align: left;
 }
@@ -328,17 +328,6 @@ h3 {
 
 @media (max-width: 600px) {
 
-.product-card {
-    display: flex;
-    flex-direction: column;   /* 🔥 vertical layout */
-    align-items: center;
-    text-align: center;
-  }
-
-  .product-card img {
-    width: 150px;   /* 🔥 reduce size */
-    height: auto;
-  }
 
   .price {
     font-size: 22px;
