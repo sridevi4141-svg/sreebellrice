@@ -327,7 +327,44 @@ h3 {
   margin-right: 20px;
 }
 
+
+
+
 @media (max-width: 600px) {
+
+  .product-card {
+    display: flex;
+    flex-direction: column;   /* 🔥 vertical layout */
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 150px;   /* 🔥 reduce size */
+    height: auto;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .inputs input {
+    width: 70px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 80%;   /* 🔥 button full width */
+    margin-top: 10px;
+  }
+}
   .price {
     font-size: 22px;
   }
@@ -347,20 +384,5 @@ h3 {
     font-size: 24px;
     padding: 18px;
   }
-}
 
 
-.category-btn {
-  font-size: 30px;
-  padding: 15px 25px;
-  margin: 8px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.category-btn:hover {
-  background-color: #45a049;
-}
