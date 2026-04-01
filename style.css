@@ -50,7 +50,7 @@ body {
 }
 
 .tabs button {
-  font-size: 40px;
+  font-size: 30px;
   padding: 12px 1px;
   border-radius: 50px;
   background-color: black;
@@ -258,6 +258,7 @@ body {
   padding: 15px;
   background: green;
   color: white;
+ 
 }
 
 #products {
@@ -277,7 +278,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 120px;
+  height: 100px;
   object-fit: cover;
 }
 
@@ -319,13 +320,26 @@ body {
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: right;
   padding-right: 20px;
   margin-right: 20px;
 }
 
 @media (max-width: 600px) {
+
+.product-card {
+    display: flex;
+    flex-direction: column;   /* 🔥 vertical layout */
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 150px;   /* 🔥 reduce size */
+    height: auto;
+  }
+
   .price {
     font-size: 22px;
   }
@@ -337,10 +351,7 @@ h3 {
   .product-card button {
     font-size: 20px;
   }
-.category-btn {
-    font-size: 26px;
-    width: 100%;
-  }
+
   .order-btn {
     font-size: 24px;
     padding: 18px;
@@ -350,15 +361,13 @@ h3 {
 
 .category-btn {
   font-size: 30px;
-  padding: 15px 25px;
-  margin: 8px;
+  padding: 8px 15px;
+  margin: 12px;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  width: 150px;
 }
 
-.category-btn:hover {
-  background-color: #45a049;
-}
