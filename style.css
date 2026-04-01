@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+.category-btn
+{
+
+  font-size: 50px;
+}
 
 /* Home */
 .container {
@@ -44,13 +49,15 @@ body {
 .tabs {
   display: flex;
   gap: 10px;
-  padding: 10px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 100px;
 }
 
 .tabs button {
-  padding: 8px 12px;
+  font-size: 60px;
+  padding: 12px 15px;
   border-radius: 50px;
+  background-color: black;
 }
 
 .tabs .active {
@@ -94,17 +101,19 @@ body {
 .details {
   flex: 1;
   text-align: left;
-  font-size: 40px;
+  font-size: 4%;
 }
 
-details h3 {
+.details h3 {
   font-size: 50px;   /* 🔥 bigger text */
   margin: 0;
+  text-align: left;
 }
 .price {
   font-size: 50px;
   font-weight: bold;
   color: green;
+  text-align: center;
 }
 
 .products {
@@ -131,7 +140,7 @@ details h3 {
   width: 120px;
   height: 50px;     /* 🔥 bigger boxes */
   padding: 18px;
-  font-size: 45px;
+  font-size: 55px;
   text-align: center;
   border-radius: 8px;
   border: 4px solid #0c0c0c;
@@ -286,14 +295,24 @@ body {
   font-size: 14px;
 }
 
-#cartItems {
-  font-size: 50px;
-  line-height: 1.6;
-  margin: 20px;
-  padding:20px;
-  text-align: right;
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.cart-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
 #cartItems strong {
   font-size: 40px;
 }

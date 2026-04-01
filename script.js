@@ -80,10 +80,9 @@ function displayProducts(products) {
           </div>
 
           <!-- 🔥 ADD TO CART BUTTON -->
-          <button onclick="addToCart('${p.id}', '${p.name}', 'qty-${p.id}', ${p.price})">
-            Add to Cart
-          </button>
-
+          <button onclick="addToCart('${p.id}', '${p.name}', 'qty-${p.id}', ${p.price}, '${p.image}')">
+  Add to Cart
+</button>
         </div>
       </div>
     `;
@@ -142,19 +141,21 @@ window.goToCart = function () {
 };
 
 // 🔹 Add to Cart
-window.addToCart = function (id, name, inputId, price) {
+window.addToCart = function (id, name, inputId, price, image) {
 
   let qty = parseFloat(document.getElementById(inputId).value) || 0;
+
   let cart = JSON.parse(localStorage.getItem("cart")) || {};
 
   if (qty > 0) {
     cart[id] = {
       name: name,
       price: price,
-      bags: qty
+      bags: qty,
+      image: image
     };
 
-    showMessage("✔ Added to Cart"); // 🔥 message
+    showMessage("✔ Added to Cart"); // 🔥 MESSAGE
   } else {
     delete cart[id];
   }
@@ -204,6 +205,7 @@ window.addEventListener("load", function () {
         <p>Qty: ${item.bags}</p>
         <p>Price: ₹${item.price}</p>
         <p>Total: ₹${itemTotal}</p>
+        <p>image:  ₹${p.image}</p>
       </div>
     `;
   }
@@ -213,40 +215,38 @@ window.addEventListener("load", function () {
   if (totalEl) totalEl.innerText = "Total: ₹" + total;
 });
 
-window.onload = function () {
+window.onload = function() {
+  displayCart();
+}
 
-  
-  let cartDiv = document.getElementById("cartItems");
+function displayCart() {
+  const cartDiv = document.getElementById("cartItems");
+  const cart = JSON.parse(localStorage.getItem("cart")) || {};
+  let total = 0;
 
-  if (cartDiv) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || {};
-    let total = 0;
+  cartDiv.innerHTML = "";  // clear first
 
-    cartDiv.innerHTML = "";
+  for (let key in cart) {
+    const item = cart[key];
+    const itemTotal = item.bags * item.price;
+    total += itemTotal;
 
-    for (let key in cart) {
-      let item = cart[key];
-      let itemTotal = item.bags * item.price;
-      total += itemTotal;
-
-      cartDiv.innerHTML += `
-        <div>
-          <strong>${item.name}</strong><br>
-          Qty: ${item.bags} × ₹${item.price} = ₹${itemTotal}
-        </div>
-        <hr>
-      `;
-       updateTotal(); 
-    }
-
-    let totalEl = document.getElementById("finalTotal");
-
-    if (totalEl) {   // 🔥 important fix
-      totalEl.innerText = total;
-    }
+    cartDiv.innerHTML += `
+  <div>
+    <img src="images/${item.image}" style="width:200px; height:200px;">
+    <strong>${item.name}</strong><br>
+    Qty: ${item.bags} × ₹${item.price}
+  </div>
+`;
   }
-};
-  
+
+  document.getElementById("finalTotal").innerText = total;
+}
+
+// Example placeOrder function
+window.placeOrder = function() {
+  alert("Order placed! Total: ₹" + document.getElementById("finalTotal").innerText);
+}  
 window.submitOrder = async function () {
   let phone = document.getElementById("phone").value;
   let cartData = JSON.parse(localStorage.getItem("cart")) || {};
@@ -321,9 +321,9 @@ function loadCart() {
   let total = 0;
 
   let div = document.getElementById("cartItems");
-  div.innerHTML = "";
+  if (!div) return;
 
-  div.innerHTML += `<hr style="border:1px dashed #000;">`;
+  div.innerHTML = "";
 
   for (let key in cart) {
     let item = cart[key];
@@ -331,26 +331,29 @@ function loadCart() {
     total += itemTotal;
 
     div.innerHTML += `
-      <div style="display:flex; justify-content:space-between; margin:5px 0;">
-        <span>${item.name}</span>
-        <span>${item.bags} × ₹${item.price} = ₹${itemTotal}</span>
+      <div class="cart-item">
+        <img src="images/${item.image}">
+        
+        <div class="cart-details">
+          <h3>${item.name}</h3>
+          <p>Qty: ${item.bags} × ₹${item.price}</p>
+          <p class="item-total">₹${itemTotal}</p>
+        </div>
       </div>
     `;
   }
 
-  div.innerHTML += `<hr style="border:1px dashed #000;">`;
-
-  let totalEl = document.getElementById("finalTotal");
-  if (totalEl) totalEl.innerText = total;
+  document.getElementById("finalTotal").innerText = total;
 }
 
+window.onload = loadCart;
 function showMessage(text) {
   let msg = document.createElement("div");
 
   msg.innerText = text;
 
   msg.style.position = "fixed";
-  msg.style.top = "20px"; 
+  msg.style.top = "50px"; 
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
   msg.style.background = "green";
@@ -369,3 +372,5 @@ function showMessage(text) {
 window.addEventListener("load", function () {
   updateTotal(); // 🔥 every page load lo run
 });
+
+
