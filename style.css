@@ -49,12 +49,12 @@ body {
   display: flex;
   gap: 10px;
   padding: 10px;
-  font-size: 20px;
+ 
 }
 
 .tabs button {
-  padding: 8px 12px;
-  border-radius: 50px;
+  padding: 12px 15px;
+  border-radius: 30px;
 }
 
 .tabs .active {
@@ -88,7 +88,7 @@ body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   align-items: center;
-width:100%;
+width:55%;
         
 }
 
@@ -337,6 +337,3 @@ h3 {
   
 }
 
-.category-btn:hover {
-  background-color: #d7dbd7;
-}
