@@ -4,6 +4,11 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; 
+}
 
 .container, .header, .tabs, #products {
   width: 100%;
