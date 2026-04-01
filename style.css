@@ -88,18 +88,18 @@ body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   align-items: center;
-
-        
+   width:100%;    
 }
 
 .product-card img {
-  width: 400px;
+  width: 120px;
+  height: auto;
 }
 
 .details {
   flex: 1;
   text-align: left;
-  font-size: 40px;
+  font-size: 16px;
 }
 
 details h3 {
@@ -107,7 +107,7 @@ details h3 {
   margin: 0;
 }
 .price {
-  font-size: 50px;
+  font-size: 20px;
   font-weight: bold;
   color: green;
 }
@@ -133,13 +133,13 @@ details h3 {
 }
 
 .inputs input {
-  width: 100px;     /* 🔥 bigger boxes */
+  width: 70px;     /* 🔥 bigger boxes */
   padding: 12px;
-  font-size: 40px;
+  font-size: 18px;
   text-align: center;
   border-radius: 8px;
   border: 4px solid #0c0b0b;
-  height:50px;
+  height: 35px;
 }/* Order */
 .order-box {
   margin-top: 50px;
@@ -310,6 +310,11 @@ h3 {
 }
 
 @media (max-width: 600px) {
+
+  
+  .product-card img {
+    width: 90px;
+  }
   .price {
     font-size: 22px;
   }
