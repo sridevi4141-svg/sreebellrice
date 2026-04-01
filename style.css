@@ -24,6 +24,11 @@ html, body {
   margin: auto;
 }
 
+.header, .tabs {
+  width: 100%;
+  overflow-x: auto;   /* 🔥 if content ekkuva unte scroll inside only */
+}
+
 .box {
   border: 1px solid #ccc;
   height: 150px;              /* 🔥 same height for all */
@@ -99,11 +104,14 @@ html, body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 100%; 
+  max-width: 100%;
 }
 
 .product-card img {
   width: 250px;
   height: auto;
+   max-width: 100%;
+  
 }
 
 .details {
@@ -130,7 +138,7 @@ html, body {
   display: flex;
   justify-content: flex-start;  /* 🔥 left-right align */
   font-size: 20px;
-  gap: 80px;
+  gap: 16px;
   color: gray;
   margin-top: 10px;
 }
