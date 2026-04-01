@@ -88,22 +88,22 @@ body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   align-items: center;
-   width:100%;    
+   width:50%;    
 }
 
 .product-card img {
-  width: 120px;
+  width: 250px;
   height: auto;
 }
 
 .details {
   flex: 1;
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
 }
 
-details h3 {
-  font-size: 50px;   /* 🔥 bigger text */
+.details h3 {
+  font-size: 25px;   /* 🔥 bigger text */
   margin: 0;
 }
 .price {
