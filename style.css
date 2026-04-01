@@ -84,7 +84,7 @@ body {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   align-items: center;
-  width: 900px;          /* 🔥 prevent overflow */
+        
 }
 
 .product-card img {
@@ -130,7 +130,7 @@ details h3 {
 .inputs input {
   width: 100px;     /* 🔥 bigger boxes */
   padding: 12px;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   border-radius: 8px;
   border: 4px solid #0c0b0b;
@@ -329,13 +329,7 @@ h3 {
 
 .category-btn {
   font-size: 25px;
-  padding: 8px 15px;
-  margin: 8px;
-  background-color: #0a0a0a;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  
 }
 
 .category-btn:hover {

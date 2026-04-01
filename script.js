@@ -233,7 +233,7 @@ function displayCart() {
 
     cartDiv.innerHTML += `
   <div>
-    <img src="images/${item.image}" style="width:200px; height:200px;">
+    <img src="images/${item.image}" style="width:100px; height:100px;">
     <strong>${item.name}</strong><br>
     Qty: ${item.bags} × ₹${item.price}
   </div>
