@@ -3,11 +3,7 @@ body {
   padding: 0;
 }
 
-.category-btn
-{
 
-  font-size: 30px;
-}
 
 /* Home */
 .container {
@@ -42,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between; /* 🔥 left + right */
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* Tabs */
@@ -55,7 +51,7 @@ body {
 
 .tabs button {
   font-size: 40px;
-  padding: 12px 15px;
+  padding: 8px 12px;
   border-radius: 50px;
   background-color: black;
 }
@@ -105,12 +101,12 @@ body {
 }
 
 .details h3 {
-  font-size: 50px;   /* 🔥 bigger text */
+  font-size: 40px;   /* 🔥 bigger text */
   margin: 0;
   text-align: left;
 }
 .price {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   color: green;
   text-align: center;
