@@ -46,7 +46,7 @@ body {
   display: flex;
   gap: 10px;
   padding: 10px;
-  font-size: 30px;
+  
 }
 
 .tabs button {
@@ -328,6 +328,19 @@ h3 {
 
 @media (max-width: 600px) {
 
+  .product-card {
+    flex-direction: row;   /* 🔥 same layout */
+    align-items: center;
+  }
+
+  .product-card img {
+    width: 90px;   /* 🔥 image small */
+  }
+
+  .details h3 {
+    font-size: 16px;
+  }
+
 
   .price {
     font-size: 22px;
@@ -348,15 +361,4 @@ h3 {
 }
 
 
-.category-btn {
-  font-size: 30px;
-  padding: 8px 15px;
-  margin: 12px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  width: 150px;
-}
 
