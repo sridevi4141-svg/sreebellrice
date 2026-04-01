@@ -340,8 +340,8 @@ h3 {
   }
 
   .product-card img {
-    width: 150px;   /* 🔥 reduce size */
-    height: auto;
+    width: 80px;   /* 🔥 reduce size */
+    height: 50px;
   }
 
   .details {
@@ -361,12 +361,12 @@ h3 {
   }
 
   button {
-    width: 80%;   /* 🔥 button full width */
+    width: 50%;   /* 🔥 button full width */
     margin-top: 10px;
   }
 }
   .price {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .labels span {
@@ -377,8 +377,8 @@ h3 {
     font-size: 20px;
   }
 .category-btn {
-    font-size: 26px;
-    width: 100%;
+    font-size: 20px;
+    width: 70%;
   }
   .order-btn {
     font-size: 24px;
