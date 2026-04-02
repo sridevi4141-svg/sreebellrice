@@ -1,6 +1,7 @@
 .body {
   margin: 0;
   padding: 0;
+  padding-top: 50px; 
 }
 
 
@@ -13,6 +14,7 @@
   padding: 20px;
   max-width: 800px;
   margin: auto;
+  
 }
 
 .box {
@@ -35,13 +37,19 @@
 }
 /* Header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: green;
+
   display: flex;
-  justify-content: space-between; /* 🔥 left + right */
   align-items: center;
-    
-  height:55px;
-  
-   
+  justify-content: space-between;
+
+  padding: 0 10px;
+  z-index: 1000;
 }
 
 /* Tabs */
@@ -49,6 +57,8 @@
   display: flex;
   gap: 10px;
   padding: 10px;
+  
+  margin-top: 100px;
   
 }
 
@@ -69,17 +79,18 @@
 
 }
 
-
 .cart-btn {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  font-size: 20px;
+  position: absolute;  /* 🔥 header lopala fix */
+  right: 20px;
+  top: 10px;
+  margin-top:10px;
+  font-size: 23px;
   background: white;
-  border-radius: 50%;
   padding: 10px;
-  box-shadow: 0 0 5px gray;
-}/* Product */
+  border-radius: 50%;
+}
+
+
 .product-card {
   display: flex;
   gap: 12px;
@@ -100,6 +111,11 @@
 
 .product-card img {
   width: 120px;
+  
+  
+  
+
+
 }
 
 .details {
