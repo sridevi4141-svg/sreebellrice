@@ -232,10 +232,12 @@ function displayCart() {
     total += itemTotal;
 
     cartDiv.innerHTML += `
-  <div>
+   <div class="cart-item">
     <img src="images/${item.image}" style="width:100px; height:100px;">
+    <div class="cart-details">
     <strong>${item.name}</strong><br>
     Qty: ${item.bags} × ₹${item.price}
+  </div>
   </div>
 `;
   }

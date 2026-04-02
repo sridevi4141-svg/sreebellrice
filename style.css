@@ -16,7 +16,10 @@
   margin: auto;
   
 }
-
+.order-btn
+{
+background-color: #0c0c0c;
+}
 .box {
   border: 1px solid #ccc;
   height: 150px;              /* 🔥 same height for all */
@@ -62,6 +65,11 @@
   
 }
 
+.product-card button {
+  background-color: black;
+  color: white;
+}
+
 .tabs button {
   font-size: 16px;
   padding: 8px 12px;
@@ -96,7 +104,6 @@
   gap: 12px;
   padding: 12px;
   margin: 10px;
-  
   border-radius: 15px;
   font-size: 20px;
   background: #fff;
@@ -147,6 +154,7 @@
   gap: 80px;
   color: gray;
   margin-top: 10px;
+  text-align: center;
 }
 
 .inputs {
@@ -197,13 +205,14 @@ hr {
   padding: 8px;
   margin-top: 10px;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .button {
   width: auto;
  padding: 12px 20px;
   margin-top: 18px;
-  background: black;
+  background-color: black;
   font-size: 25px;
   color: white;
   border: none;
@@ -221,7 +230,7 @@ hr {
 .h1{
  text-align: center;
 }.back-btn {
-  background: black;
+  background-color: black !important;
   color: white;
   border: none;
   width: 35px;
@@ -253,9 +262,9 @@ hr {
 }
 
 .order-btn {
-  font-size: 20px;        /* 🔥 text size */
+  font-size: 15px;        /* 🔥 text size */
   padding: 15px;
-  width: 30%;
+  width: 20%;
   background-color: #a72828;
   color: white;
   border: none;
@@ -320,11 +329,9 @@ hr {
 }
 
 .cart-item img {
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  border-radius: 8px;
-  border: 1px solid #ddd;
 }
 #cartItems strong {
   font-size: 20px;
@@ -383,7 +390,7 @@ h3 {
   }
 
 
-  button {
+  .button {
     font-size: 14px;
     padding: 8px 12px;
   }
