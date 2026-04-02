@@ -94,7 +94,7 @@
   
    max-width: 100%;    
    
-   width: 95%;          /* 🔥 main change */
+   width: 100%;          /* 🔥 main change */
   margin-left: auto;   /* center ki */
   margin-right: auto;/* 🔥 prevent overflow */
 }
