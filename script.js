@@ -324,10 +324,10 @@ function showMessage(text) {
   msg.innerText = text;
 
   msg.style.position = "fixed";
-  msg.style.top = "100px"; 
+  msg.style.top = "140px"; 
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
-  msg.style.background = "green";
+  msg.style.background = "black";
   msg.style.color = "#fff";
   msg.style.padding = "10px 20px";
   msg.style.borderRadius = "5px";
